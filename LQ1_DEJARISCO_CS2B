@@ -1,0 +1,78 @@
+//Task 1
+let user_name = prompt("beabadobee");
+let user_password = prompt("ediwow:");
+let password = ediwow123 //change this to the correct pass
+
+if(user_password === password){
+    alert(`Welcome ${user_name}`);
+} else {
+    alert("Maybe Username or Password is Invalid or Does not Match");
+}
+
+//Task 2 
+let dog_breed = prompt("Shitzu:");
+let print_count = parseInt(prompt("12:"));
+
+for (let i = 0; i < print_count; i++) {
+    console.log(dog_breed); //display a 12 stitzu output
+}
+
+//Task 3
+let item_choice = prompt("A": \nA. Pepsi Cola\nB. Coca Cola\nC. Apple (per kg)\nD. Orange (per kg)\nE. Hotdogs (per kg)");
+let qty = parseInt(prompt("1.5:"));
+let total_price = 0;
+
+switch (item_choice.toUpperCase()) {
+    case 'A':
+        total_price = qty * 1.5; // price per unit
+        alert(The Total Price of the order Pepsi Cola x ${qty}: $${total_price});
+        break;
+    case 'B':
+        total_price = qty * 1.8;
+        alert(The Total Price of the order Coca Cola x ${qty}: $${total_price});
+        break;
+    case 'C':
+        total_price = qty * 3.0;
+        alert(The Total Price of the order Apple x ${qty}: $${total_price});
+        break;
+    case 'D':
+        total_price = qty * 2.5;
+        alert(The Total Price of the order Orange x ${qty}: $${total_price});
+        break;
+    case 'E':
+        total_price = qty * 4.0;
+        alert(The Total Price of the order Hotdogs x ${qty}: $${total_price});
+        break;
+    default:
+        alert("No matching item! Try to re-run the program.");
+}
+
+//Task 4
+let createMatrix = confirm("Do you want to create a Matrix?");
+
+if (createMatrix) {
+    let rows = parseInt(prompt("1:"));
+    let cols = parseInt(prompt("9:"));
+    let depth = parseInt(prompt("3:"));
+
+    let str1 = prompt("#:");
+    let str2 = prompt("@:");
+    let str3 = prompt("$:");
+
+    let symbols = [str1, str2, str3];
+
+    console.log("Generated Matrix:");
+
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            let rowStr = "";
+            for (let k = 0; k < depth; k++) {
+                rowStr += symbols[k % 3] + " "; //cycle through the three strings
+            }
+            console.log(rowStr); // print each row
+        }
+        console.log("\n"); // Separate layers
+    }
+} else {
+    console.log("Thank you, re-run the program if you change your mind.");
+}
